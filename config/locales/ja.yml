@@ -1,0 +1,14 @@
+ja:
+  date:
+    formats:
+      default: "%Y年%m月%d日"
+  activerecord:
+    attributes:
+      room:
+        name: 宿泊施設の名前
+        introduction: 宿泊施設の紹介文
+        price: 値段
+        address: 住所
+        image: 画像
+      user:
+        name: ユーザー名
