@@ -1,24 +1,34 @@
-# README
+## 変更の概要
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* ユーザーのログイン機能
+* roomの登録機能
+* roomの予約機能
+* トップ画面(エリア検索、フリーワードで検索機能)
+* 予約履歴の参照機能
 
-Things you may want to cover:
+## やったこと
 
-* Ruby version
+* [x] ユーザーのログイン機能の追加
+* [x] roomの登録機能の追加
+* [x] roomの予約機能の追加
+* [x] トップ画面(エリア検索、フリーワードで検索機能)の追加
+* [x] 予約履歴の参照機能の追加
 
-* System dependencies
+## どうやるのか
 
-* Configuration
+* ログイン機能：deviseを使用しました。別途users_controllerを作成して、アカウントのプロフィールを編集できるようにしました。
+* roomの登録機能：新規のroomを追加する機能のみつけました。deleteやedit機能はつけていません。
+* roomの予約機能：一度確認画面に進んでから予約できるように設定しました。
 
-* Database creation
+## 課題
 
-* Database initialization
+予約画面のときに何も入力せずに予約ボタンを押すとエラーになってしまう点
+* reservationsのコントローラのcreateに分岐を作るのではなく、rooms_controllerのshowで分岐を作るのではないかと思ったのですが、予約の確認画面に進む前にデータを保存しているわけではないため、validationでエラーを検知して分岐させることができませんでした。
+* 解決方法がわからなかったのですが、見本のサイト（`https://presite-potepancamp-rails-02.herokuapp.com/`）でもエラーになっているようなので、とりあえず提出させていただきました。
 
-* How to run the test suite
+## 備考
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+*  carrierwaveを使ってユーザーのアイコンのデフォルト画像を設定しました
+* bootstrap4を使用して見た目を編集しました
+* Active Storageを使用して、Roomの画像を管理するように設定しました
+* プルリクのコメントの書き方についても何かアドバイスありましたら教えて下さい。こちらのサイト（`https://applis.io/posts/how-to-write-git-pull-request`）を参照しました
